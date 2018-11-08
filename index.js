@@ -6,6 +6,11 @@ const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
 // required packages
 
+// routers
+const prosRouter = require('./controllers/pros')
+
+// routers
+
 // middleware
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(override('_method'))
@@ -25,6 +30,10 @@ app.use((req, res, next) => {
   next()
 })
 // custom middleware
+
+// config paths to routers
+app.use('/pros', prosRouter)
+// config paths to routers
 
 // home route
 app.get('/', (req, res) => {

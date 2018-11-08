@@ -1,0 +1,9 @@
+extends ../layout.pug
+
+block content
+    div
+        each pro in pros
+            - let url = '/pros/' + pro._id
+            h3
+                a(href=url) #{pro.name}
+
