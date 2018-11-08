@@ -2,9 +2,9 @@ extends ../layout.pug
 
 block content
     h3 #{pro.name}
-        - let source = pro.image
-        img(src=source alt='headshot')
-        p #{pro.bio.nationality}
-        p #{pro.bio.born} - #{pro.bio.died}
-        p #{pro.bio.worldChampion.toString()}
-        p #{pro.bio.shortBio}
+    - let source = pro.image
+    img(src=source alt='headshot')
+    p #{pro.bio.nationality}
+    p #{pro.bio.born} - #{pro.bio.died}
+    p #{pro.bio.worldChampion.toString()}
+    p #{pro.bio.shortBio}

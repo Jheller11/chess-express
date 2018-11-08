@@ -4,11 +4,11 @@ const app = express()
 const override = require('method-override')
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
+const path = require('path')
 // required packages
 
 // routers
 const prosRouter = require('./controllers/pros')
-
 // routers
 
 // middleware
@@ -19,7 +19,7 @@ app.use(express.static('public'))
 // middleware
 
 // view engine (Pug)
-app.set('views', './views')
+app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'pug')
 // view engine
 
