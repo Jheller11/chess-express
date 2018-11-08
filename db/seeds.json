@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Test One",
+    "bio": {
+      "born": "1970",
+      "died": "Present",
+      "nationality": "USA",
+      "worldChampion": true,
+      "shortBio": "I played chess professionally and here is my bio. I played chess professionally and here is my bio. I played chess professionally and here is my bio. I played chess professionally and here is my bio. I played chess professionally and here is my bio."
+    },
+    "image": "https://www.telegraph.co.uk/content/dam/on-demand/2017/08/10/bobby-best_trans_NvBQzQNjv4BqBhLOK858p5b0LDLQeH7Qe5RwuU8rcowmdEVdMqT9Ahk.jpg?imwidth=1400"
+  },
+  {
+    "name": "Test Two",
+    "bio": {
+      "born": "1960",
+      "died": "2010",
+      "nationality": "FRA",
+      "worldChampion": false,
+      "shortBio": "I played chess professionally and here is my bio. I played chess professionally and here is my bio. I played chess professionally and here is my bio. I played chess professionally and here is my bio. I played chess professionally and here is my bio."
+    },
+    "image": "https://www.telegraph.co.uk/content/dam/on-demand/2017/08/10/bobby-best_trans_NvBQzQNjv4BqBhLOK858p5b0LDLQeH7Qe5RwuU8rcowmdEVdMqT9Ahk.jpg?imwidth=1400"
+  }
+]
