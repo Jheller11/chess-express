@@ -1,3 +1,11 @@
 img {
   height: 200px;
 }
+
+main {
+  min-height: 500px;
+}
+
+body {
+  padding: 1em;
+}

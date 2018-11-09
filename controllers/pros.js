@@ -9,7 +9,7 @@ router.get('/:id', (req, res) => {
       res.render('pros/show', { pro: pro })
     })
     .catch(err => {
-      console.log(err)
+      res.render('error', { error: err })
     })
 })
 
@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
       res.render('pros/index', { pros: pros })
     })
     .catch(err => {
-      console.log(err)
+      res.render('error', { error: err })
     })
 })
 

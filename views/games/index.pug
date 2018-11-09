@@ -4,6 +4,6 @@ block content
     div
         each game in games
             - let url = '/games/' + game._id
-            h3
+            div
                 a(href=url) #{game.white} vs. #{game.black} (#{game.year})
 

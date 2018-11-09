@@ -4,6 +4,6 @@ block content
     div
         each pro in pros
             - let url = '/pros/' + pro._id
-            h3
+            div
                 a(href=url) #{pro.name}
 

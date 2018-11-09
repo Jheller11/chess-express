@@ -5,10 +5,12 @@ const override = require('method-override')
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
 const path = require('path')
+const helmet = require('helmet')
 // required packages
 
 // routers
 const prosRouter = require('./controllers/pros')
+const gamesRouter = require('./controllers/games')
 // routers
 
 // middleware
@@ -16,6 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(override('_method'))
 app.use(cookieParser())
 app.use(express.static('public'))
+app.use(helmet())
 // middleware
 
 // view engine (Pug)
@@ -33,6 +36,7 @@ app.use((req, res, next) => {
 
 // config paths to routers
 app.use('/pros', prosRouter)
+app.use('/games', gamesRouter)
 // config paths to routers
 
 // home route

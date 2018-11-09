@@ -9,7 +9,7 @@ router.get('/:id', (req, res) => {
       res.render('games/show', { game: game })
     })
     .catch(err => {
-      console.log(err)
+      res.render('error', { error: err })
     })
 })
 
@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
       res.render('games/index', { games: games })
     })
     .catch(err => {
-      console.log(err)
+      res.render('error', { error: err })
     })
 })
 
