@@ -11,6 +11,7 @@ const helmet = require('helmet')
 // routers
 const prosRouter = require('./controllers/pros')
 const gamesRouter = require('./controllers/games')
+const usersRouter = require('./controllers/users')
 // routers
 
 // middleware
@@ -37,6 +38,7 @@ app.use((req, res, next) => {
 // config paths to routers
 app.use('/pros', prosRouter)
 app.use('/games', gamesRouter)
+app.use('/users', usersRouter)
 // config paths to routers
 
 // home route
@@ -52,3 +54,4 @@ app.listen(app.get('port'), () =>
   console.log('server running on ' + app.get('port'))
 )
 // config port
+module.exports = app
