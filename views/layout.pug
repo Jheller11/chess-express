@@ -5,7 +5,15 @@ html
     link(href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet")
   body
     header
-        div My New Title
+        nav
+            .nav-wrapper
+                a.brand-logo(href='/') Chess
+                ul#nav-mobile.right.hide-on-med-and-down
+                    li
+                        a(href='/pros') Grandmasters
+                    li
+                        a(href='/games') Games
+
     
 
     main

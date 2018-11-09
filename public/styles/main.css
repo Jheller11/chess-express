@@ -4,8 +4,5 @@ img {
 
 main {
   min-height: 500px;
-}
-
-body {
-  padding: 1em;
+  padding: 0 1em;
 }

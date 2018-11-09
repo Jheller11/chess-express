@@ -6,6 +6,7 @@ const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
 const path = require('path')
 const helmet = require('helmet')
+const fetch = require('node-fetch')
 // required packages
 
 // routers
@@ -39,6 +40,7 @@ app.use((req, res, next) => {
 app.use('/pros', prosRouter)
 app.use('/games', gamesRouter)
 app.use('/users', usersRouter)
+
 // config paths to routers
 
 // home route
@@ -47,6 +49,12 @@ app.get('/', (req, res) => {
 })
 // home route
 
+// resource not found
+app.get('*', (req, res) => {
+  res.render('404')
+})
+// resource not found
+
 // config port
 app.set('port', process.env.PORT || 4000)
 
@@ -54,4 +62,5 @@ app.listen(app.get('port'), () =>
   console.log('server running on ' + app.get('port'))
 )
 // config port
+
 module.exports = app
