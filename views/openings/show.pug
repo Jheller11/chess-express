@@ -7,13 +7,9 @@ block content
     div Opening Moves:
         each move in opening.moves
             li #{move}
-    div #{board.slice(0, 8).join(' ')}
-    div #{board.slice(8, 16).join(' ')}
-    div #{board.slice(16, 24).join(' ')}
-    div #{board.slice(24, 32).join(' ')}
-    div #{board.slice(32, 40).join(' ')}
-    div #{board.slice(40, 48).join(' ')}
-    div #{board.slice(48, 56).join(' ')}
-    div #{board.slice(56, 64).join(' ')}
+    div.chessboard
 
-    
+block scripts
+    script(type='text/javascript').
+        let board = !{board}
+    script(src='/scripts/chessboard.js')
