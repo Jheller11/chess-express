@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Ruy Lopez",
+    "intro": "The Ruy Lopez intro",
+    "moves": ["e4", "e5", "Nf3", "Nc6", "Bb5"]
+  },
+  {
+    "name": "French Defense",
+    "intro": "Black meets e4 with e6.",
+    "moves": ["e4", "e6"]
+  }
+]

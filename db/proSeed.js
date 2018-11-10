@@ -1,6 +1,6 @@
 const Pro = require('../models/Pro')
 const mongoose = require('./connection')
-const seeds = require('./seeds.json')
+const seeds = require('./proSeeds.json')
 
 Pro.deleteMany({})
   .then(() => {

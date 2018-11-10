@@ -5,6 +5,6 @@ block content
         h4 Players:
         each pro in pros
             - let url = '/pros/' + pro._id
-            div
+            li
                 a(href=url) #{pro.name}
 

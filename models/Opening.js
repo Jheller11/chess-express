@@ -11,6 +11,10 @@ const openingSchema = new mongoose.Schema({
   resources: {
     type: Array,
     default: []
+  },
+  moves: {
+    type: Array,
+    required: true
   }
 })
 

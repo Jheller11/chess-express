@@ -1,0 +1,10 @@
+extends ../layout.pug
+
+block content
+    h4 #{opening.name}
+    div Description:
+        div #{opening.intro}
+    div Opening Moves:
+        each move in opening.moves
+            li #{move}
+    div #{chess.ascii().toString()}

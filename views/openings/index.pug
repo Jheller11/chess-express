@@ -1,0 +1,9 @@
+extends ../layout.pug
+
+block content
+    div
+        h4 Openings:
+        each opening in openings
+            - let url = '/openings/' + opening._id
+            li
+                a(href=url) #{opening.name}

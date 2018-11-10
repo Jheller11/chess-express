@@ -6,13 +6,13 @@ const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
 const path = require('path')
 const helmet = require('helmet')
-const fetch = require('node-fetch')
 // required packages
 
 // routers
 const prosRouter = require('./controllers/pros')
 const gamesRouter = require('./controllers/games')
 const usersRouter = require('./controllers/users')
+const openingsRouter = require('./controllers/openings')
 // routers
 
 // middleware
@@ -40,7 +40,7 @@ app.use((req, res, next) => {
 app.use('/pros', prosRouter)
 app.use('/games', gamesRouter)
 app.use('/users', usersRouter)
-
+app.use('/openings', openingsRouter)
 // config paths to routers
 
 // home route
