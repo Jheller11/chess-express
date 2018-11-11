@@ -10,13 +10,20 @@ html
     header
         nav
             .nav-wrapper
-                a.brand-logo(href='/') Chess
-                ul#nav-mobile.right.hide-on-med-and-down
+                a.brand-logo.right(href='/') Chess
+                ul#nav-mobile.left
                     li
                         a(href='/pros') Grandmasters
                     li
                         a(href='/games') Games
-
+                    li
+                        a(href='/openings') Openings
+                    if !user
+                        li
+                            a(href='/users/login') Signup/Login
+                    else
+                        li
+                            a(href='/users/profile') Profile
     
 
     main

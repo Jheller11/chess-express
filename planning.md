@@ -11,3 +11,7 @@
 6. Create user auth.
 7. Create Admin path.
 8. Deploy
+
+## Next Step
+
+chessboard.js => add pieces to board generated in JS. update variable name.

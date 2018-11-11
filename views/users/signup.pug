@@ -1,1 +1,12 @@
 extends ../layout.pug
+
+block content
+    div
+        h4.center-align Create Account:
+        form(method="POST" action="/users/signup")
+            input.validate(type='text'  autocomplete='username')
+            label(for='username') Username
+            input.validate(type='password'  autocomplete='new-password')
+            label(for='password') Password
+            input.validate(type='password'  autocomplete='new-password')
+            label(for='password') Confirm Password

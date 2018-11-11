@@ -1,1 +1,10 @@
 extends ../layout.pug
+
+block content
+    div
+        h4 Sign in:
+        form(method="POST" action="/users/login")
+            input.validate(type='text'  autocomplete='username')
+            label(for='username') Username
+            input.validate(type='password'  autocomplete='new-password')
+            label(for='password') Password

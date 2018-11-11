@@ -7,7 +7,9 @@ class ChessBoard {
   }
 
   render() {
+    // i == row
     for (let i = 0; i < 8; i++) {
+      // j = column
       for (let j = 0; j < 8; j++) {
         let square = document.createElement('div')
         if ((i + j) % 2 === 0) {
@@ -24,5 +26,6 @@ class ChessBoard {
   }
 }
 
-let myBoard = new ChessBoard(div, board)
+// create new board at div class=chessboard, add pieces from server
+let myBoard = new ChessBoard(div, pieces)
 myBoard.render()

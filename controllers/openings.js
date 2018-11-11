@@ -8,10 +8,10 @@ router.get('/:id', (req, res) => {
   Opening.findOne({ _id: req.params.id })
     .then(opening => {
       let chess = new Chess()
-      let board = generateBoard(chess)
+      let piecesArray = generateBoard(chess)
       res.render('openings/show', {
         opening: opening,
-        board: JSON.stringify(board)
+        pieces: JSON.stringify(piecesArray)
       })
     })
     .catch(err => {
