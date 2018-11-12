@@ -4,7 +4,9 @@ block content
     div
         h4 Sign in:
         form(method="POST" action="/users/login")
-            input.validate(type='text'  autocomplete='username')
+            input.validate(type='text'  autocomplete='username' name='username')
             label(for='username') Username
-            input.validate(type='password'  autocomplete='new-password')
+            input.validate(type='password'  autocomplete='new-password' name='password')
             label(for='password') Password
+            br
+            input(type='submit' value='Sign In')
