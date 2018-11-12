@@ -1,1 +1,8 @@
 extends ../layout.pug
+
+block content
+    div
+        if !user
+            p You are not logged in.  Please log in to view your profile.
+        else
+            p #{user.username}

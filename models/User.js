@@ -1,4 +1,5 @@
 const mongoose = require('../db/connection')
+const bcrypt = require('bcrypt-nodejs')
 
 const userSchema = new mongoose.Schema({
   username: {
@@ -19,6 +20,14 @@ const userSchema = new mongoose.Schema({
     }
   }
 })
+
+userSchema.methods.generateHash = password => {
+  return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null)
+}
+
+userSchema.methods.validPassword = (password, user) => {
+  return bcrypt.compareSync(password, user.local.password)
+}
 
 const User = mongoose.model('User', userSchema)
 

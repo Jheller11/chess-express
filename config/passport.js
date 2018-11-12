@@ -25,6 +25,7 @@ module.exports = passport => {
       },
       (req, username, password, done) => {
         process.nextTick(() => {
+          console.log('jere')
           User.findOne({ username: username }, (err, user) => {
             if (err) return done(err)
             if (user) {

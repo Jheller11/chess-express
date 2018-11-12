@@ -2,14 +2,18 @@ extends ../layout.pug
 
 block content
     div
+        if message
+            p #{message}
         h4.center-align Create Account:
         form(method="POST" action="/users/signup")
             span * Required
-            input.validate(type='text'  autocomplete='username')
+            input.validate(type='text'  autocomplete='username' name='username' required)
             label(for='username') Username*
-            input.validate(type='password'  autocomplete='new-password')
+            input.validate(type='password'  autocomplete='new-password' name='password' required)
             label(for='password') Password*
-            input.validate(type='password'  autocomplete='new-password')
+            input.validate(type='password'  autocomplete='new-password', name='confirmPassword' required)
             label(for='password') Confirm Password*
-            input.validate(type='password'  autocomplete='new-password')
-            label(for='password') Confirm Password
+            input.validate(type='text'  autocomplete='username' name='chessDotCom')
+            label(for='chessDotCom.username') Chess.com Username:
+            br
+            input(type='submit' value='Create Account')
