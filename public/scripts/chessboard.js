@@ -12,6 +12,14 @@ class ChessBoard {
       // j = column
       for (let j = 0; j < 8; j++) {
         let square = document.createElement('div')
+        let piece = document.createElement('img')
+        if (this.pieces[i][j].piece) {
+          piece.setAttribute(
+            'src',
+            `/images/${this.pieces[i][j].piece + this.pieces[i][j].color}.png`
+          )
+          square.appendChild(piece)
+        }
         if ((i + j) % 2 === 0) {
           this.element.appendChild(square)
         } else {
