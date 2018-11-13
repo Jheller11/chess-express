@@ -1,14 +1,24 @@
 extends ../layout.pug
 
 block content
-    div
-        if message
-            p #{message}
-        h4 Sign in:
-        form(method="POST" action="/users/login")
-            input.validate(type='text'  autocomplete='username' name='username')
-            label(for='username') Username
-            input.validate(type='password'  autocomplete='new-password' name='password')
-            label(for='password') Password
-            br
-            input(type='submit' value='Sign In')
+
+    div.card.container.center-align
+        h4.center-align Sign in:
+        .row
+            form.col.s8.center(method="POST" action="/users/login")
+                .input-field
+                    input.validate(type='text'  autocomplete='username' name='username')
+                    label(for='username') Username
+                .input-field
+                    input.validate(type='password'  autocomplete='new-password' name='password')
+                    label(for='password') Password
+                br
+                input(type='submit' value='Sign In')
+            .col.s4
+                if message
+                    p.red-text #{message}
+
+    div Existing users can log in here.
+    div New to the site? Please register 
+        a(href='/users/signup') here
+        span .

@@ -9,7 +9,7 @@ const newUser = {
   username: 'testuser1',
   password: 'testpassword1',
   confirmPassword: 'testpassword1',
-  _id: '5beaef5ed11a2e1d0a787dcd'
+  _id: ''
 }
 
 describe('Users Controller', () => {

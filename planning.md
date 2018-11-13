@@ -1,4 +1,4 @@
-1. Render board with moves, enable playback
+1. Render board with moves, enable playback (use chessboard.js with chess.js?)
 
 2. Allow user to upload game.
 

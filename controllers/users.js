@@ -24,6 +24,17 @@ router.post(
   })
 )
 
+// delete user route
+router.delete('/:id', (req, res) => {
+  User.findOneAndDelete({ _id: req.params.id })
+    .then(() => {
+      res.redirect('/')
+    })
+    .catch(err => {
+      res.render('error', { error: err })
+    })
+})
+
 // user logout route
 router.get('/logout', (req, res) => {
   req.logout()
