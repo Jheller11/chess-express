@@ -1,19 +1,25 @@
 extends ../layout.pug
 
 block content
-    div
-        if message
-            p #{message}
+    div.card.container.center-align
         h4.center-align Create Account:
-        form(method="POST" action="/users/signup")
-            span * Required
-            input.validate(type='text'  autocomplete='username' name='username' required)
-            label(for='username') Username*
-            input.validate(type='password'  autocomplete='new-password' name='password' required)
-            label(for='password') Password*
-            input.validate(type='password'  autocomplete='new-password', name='confirmPassword' required)
-            label(for='password') Confirm Password*
-            input.validate(type='text'  autocomplete='username' name='chessDotCom')
-            label(for='chessDotCom.username') Chess.com Username:
-            br
-            input(type='submit' value='Create Account')
+        .row
+            form.col.s8.center(method="POST" action="/users/signup")
+                span * Required
+                .input-field
+                    input.validate(type='text'  autocomplete='username' name='username' required)
+                    label(for='username') Username*
+                .input.field
+                    input.validate(type='password'  autocomplete='new-password' name='password' required)
+                    label(for='password') Password*
+                .input-field
+                    input.validate(type='password'  autocomplete='new-password', name='confirmPassword' required)
+                    label(for='password') Confirm Password*
+                .input-field
+                    input.validate(type='text'  autocomplete='username' name='chessDotCom')
+                    label(for='chessDotCom.username') Chess.com Username:
+                br
+                input(type='submit' value='Create Account')
+            .col.s4
+                if message
+                    p #{message}
