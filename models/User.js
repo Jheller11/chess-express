@@ -18,6 +18,10 @@ const userSchema = new mongoose.Schema({
     username: {
       type: String
     }
+  },
+  games: {
+    type: Array,
+    default: []
   }
 })
 

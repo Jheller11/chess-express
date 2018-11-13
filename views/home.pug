@@ -1,4 +1,39 @@
 extends ./layout.pug
 
 block content
-    div I am from the home page
+    .container
+        .row.section
+            a.col.m6(href='/pros')
+                div.center
+                    h5 Professionals    
+                    img.center(src='/images/bishopblack.png')
+                div Learn from the best! Research Grandmasters, their famous games, quotes, and other information.
+            a.col.m6(href='/games')
+                div.center
+                    h5 Games Archive    
+                    img.center(src='/images/kingblack.png')
+                div View analysis of games, positions, and relive moments in chess history.
+        .divider
+        .row.section
+            a.col.m6(href='/openings')
+                div.center
+                    h5 Openings    
+                    img.center(src='/images/knightblack.png')
+                div Know how to start a game. Learn how to attack and defend with some of the most common openings in chess.
+            a.col.m6(href='/users/profile')
+                div.center
+                    h5 Analyze Your Games    
+                    img.center(src='/images/queenblack.png')
+                div Create an account or sign in to upload your own games and use tools to analyze your skills.
+        .divider
+        .row.section
+            a.col.m6(href='/resources')
+                div.center
+                    h5 Resources    
+                    img.center(src='/images/pawnblack.png')
+                div Tips, links, and tools for beginner players.  Learn how to play your first game!
+            a.col.m6(href='/data')
+                div.center
+                    h5 Analysis   
+                    img.center(src='/images/rookblack.png')
+                div View data on players, opening moves, and a detailed breakdown of all of the games in the database.

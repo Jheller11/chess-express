@@ -2,6 +2,8 @@ extends ../layout.pug
 
 block content
     div
+        if message
+            p #{message}
         h4 Sign in:
         form(method="POST" action="/users/login")
             input.validate(type='text'  autocomplete='username' name='username')
