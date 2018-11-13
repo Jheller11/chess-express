@@ -51,6 +51,7 @@ module.exports = passport => {
               newUser.username = username
               newUser.password = newUser.generateHash(password)
               newUser.chessDotCom.username = req.body.chessDotCom
+              newUser.admin = req.body.admin
               console.log(newUser)
               newUser.save(err => {
                 if (err) throw err

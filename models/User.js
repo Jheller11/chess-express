@@ -22,6 +22,10 @@ const userSchema = new mongoose.Schema({
   games: {
     type: Array,
     default: []
+  },
+  admin: {
+    type: Boolean,
+    default: false
   }
 })
 

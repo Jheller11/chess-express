@@ -1,4 +1,35 @@
 extends ../layout.pug
 
 block content
-    div here is the dashboard
+    .container
+        .row.section
+            h4 Admin Dashboard
+        .divider
+        h5 Resources
+        .row
+            .col.s6
+                h6 Professionals
+                li
+                    a(href='/pros') Index
+                li
+                    a(href='/pros/new') New
+            .col.s6
+                h6 Games
+                li
+                    a(href='/games') Index
+                li
+                    a(href='/games/new') New
+        .divider
+        .row
+            .col.s6
+                h6 Openings
+                li
+                    a(href='/openings') Index
+                li
+                    a(href='/openings/new') New
+        .divider
+        .row
+            .col.s12
+                h6 Users
+                    each user in users
+                        li #{user.username}
