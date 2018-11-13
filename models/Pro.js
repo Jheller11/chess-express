@@ -8,19 +8,24 @@ const proSchema = new mongoose.Schema({
   },
   bio: {
     born: {
-      type: String
+      type: String,
+      required: true
     },
     died: {
-      type: String
+      type: String,
+      required: true
     },
     nationality: {
-      type: String
+      type: String,
+      required: true
     },
     worldChampion: {
-      type: Boolean
+      type: Boolean,
+      required: true
     },
     shortBio: {
-      type: String
+      type: String,
+      required: true
     }
   },
   image: {
