@@ -16,6 +16,7 @@ const prosRouter = require('./controllers/pros')
 const gamesRouter = require('./controllers/games')
 const usersRouter = require('./controllers/users')
 const openingsRouter = require('./controllers/openings')
+const adminRouter = require('./controllers/admin')
 // routers
 
 // middleware
@@ -52,6 +53,7 @@ app.use('/pros', prosRouter)
 app.use('/games', gamesRouter)
 app.use('/users', usersRouter)
 app.use('/openings', openingsRouter)
+app.use('/admin', adminRouter)
 // config paths to routers
 
 // home route
