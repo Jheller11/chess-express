@@ -9,7 +9,7 @@ block content
                 .input-field
                     input.validate(type='text'  autocomplete='username' name='username' required)
                     label(for='username') Username*
-                .input.field
+                .input-field
                     input.validate(type='password'  autocomplete='new-password' name='password' required)
                     label(for='password') Password*
                 .input-field
@@ -23,3 +23,7 @@ block content
             .col.s4
                 if message
                     p #{message}
+    div Create an account to save and analyze games.
+    div Already have an account? Click 
+        a(href='/users/login') here
+        span .

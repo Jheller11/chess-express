@@ -1,0 +1,35 @@
+extends ../layout.pug
+
+block content
+    div.card.container.center-align
+        h4.center-align Add a Professional:
+        .row
+            form.col.s8.center(method="POST" action="/pros/new")
+                .input-field
+                    input.validate(type='text'  name='name' required)
+                    label(for='name') Name
+                .input-field
+                    input.validate(type='text'  name='bio.born' required)
+                    label(for='bio.born') Born
+                .input-field
+                    input.validate(type='text'   name='bio.died' required)
+                    label(for='bio.died') Died
+                .input-field
+                    input.validate(type='text'  name='bio.nationality' required)
+                    label(for='bio.nationality') Nationality
+                .input-field
+                    input.validate(type='text'  name='bio.worldChampion' required)
+                    label(for='bio.worldChampion') World Champion
+                .input-field
+                    input.validate(type='textarea'  name='bio.shortBio' required)
+                    label(for='bio.shortBio') Short Bio
+                .input-field
+                    input.validate(type='text'  name='image' required)
+                    label(for='image') Link to Image:
+                br
+                input(type='submit' value='Create Account')
+            .col.s4
+                if message
+                    p #{message}
+    div Create a new professional profile.
+    div Admin only area.
