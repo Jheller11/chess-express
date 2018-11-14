@@ -4,7 +4,7 @@
 
 3. Link to chess.com
 
-4. Create admin section.
+4. Create admin section. (11/13)
 
 5. Big Data/Analysis
 
