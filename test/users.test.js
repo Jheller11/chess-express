@@ -42,18 +42,4 @@ describe('Users Controller', () => {
         done()
       })
   })
-  //   it('should delete a user', done => {
-  //     chai
-  //       .request(app)
-  //       .delete('/users/signup')
-  //       .set('content-type', 'application/x-www-form-urlencoded')
-  //       .send(newUser)
-  //       .end((err, res) => {
-  //         console.log(res)
-  //         expect(res.redirects).to.equal(
-  //           "[ 'http://127.0.0.1:56165/users/profile' ]"
-  //         )
-  //         done()
-  //       })
-  //   })
 })

@@ -3,6 +3,28 @@ const router = express.Router()
 const Opening = require('../models/Opening')
 const Chess = require('chess.js').Chess
 const generateBoard = require('../config/utilities').generateBoard
+const isAdminUser = require('../config/utilities').isAdminUser
+
+// create new opening
+router.post('/new', isAdminUser, (req, res) => {
+  Opening.create({
+    name: req.body.name,
+    intro: req.body.into,
+    moves: req.body.moves,
+    resources: req.body.resources
+  })
+    .then(opening => {
+      res.redirect(`/openings/${opening.id}`)
+    })
+    .catch(err => {
+      res.render('error', { error: err })
+    })
+})
+
+// show new form
+router.get('/new', isAdminUser, (req, res) => {
+  res.render('openings/new.pug')
+})
 
 // games show
 router.get('/:id', (req, res) => {

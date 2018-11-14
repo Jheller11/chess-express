@@ -1,9 +1,10 @@
 const express = require('express')
 const router = express.Router()
 const Pro = require('../models/Pro')
+const isAdminUser = require('../config/utilities').isAdminUser
 
 // create new pro
-router.post('/new', (req, res) => {
+router.post('/new', isAdminUser, (req, res) => {
   Pro.create({
     name: req.body.name,
     bio: {
@@ -24,7 +25,7 @@ router.post('/new', (req, res) => {
 })
 
 // show new form
-router.get('/new', (req, res) => {
+router.get('/new', isAdminUser, (req, res) => {
   res.render('pros/new.pug')
 })
 
