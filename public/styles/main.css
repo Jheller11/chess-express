@@ -6,3 +6,11 @@ main {
   min-height: 500px;
   padding: 0 1em;
 }
+
+.home-link:hover {
+  transform: translateY(-2px);
+}
+
+footer {
+  min-height: 80px;
+}

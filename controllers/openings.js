@@ -10,7 +10,7 @@ router.post('/new', isAdminUser, (req, res) => {
   Opening.create({
     name: req.body.name,
     intro: req.body.into,
-    moves: req.body.moves,
+    moves: req.body.moves.split(', '),
     resources: req.body.resources
   })
     .then(opening => {
