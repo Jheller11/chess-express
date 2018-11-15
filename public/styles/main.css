@@ -14,3 +14,8 @@ main {
 footer {
   min-height: 80px;
 }
+
+.my-text-area {
+  height: 100px;
+  width: 100%;
+}

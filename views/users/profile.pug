@@ -1,8 +1,22 @@
 extends ../layout.pug
 
 block content
-    div
-        if !user
-            p You are not logged in.  Please log in to view your profile.
-        else
-            h4 #{user.username}
+    .container
+        .row
+            .col.s6
+                h4 #{user.username}
+                h5 Chess.com: #{user.chessDotCom.username}
+        .row
+            p To add a game, paste the png file here and click submit. 
+            form.col.s12.center(method="POST" action=`/users/${user._id}`)
+                label Add a game:
+                input.my-text-area(type='textarea' name='game' required)
+                br
+                input(type='submit' value='Add Game')
+            .col.s4
+                if message
+                    p.red-text #{message}
+        .row
+            .col.s12
+                each game in user.games
+                    li #{game}
